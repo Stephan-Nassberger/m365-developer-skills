@@ -28,6 +28,11 @@ def validate():
  manifest=json.loads((ROOT/'plugin-preparation/plugin.json').read_text(encoding='utf-8'))
  if manifest['$schema']!='https://agent-plugins.org/schemas/1.0.0/plugin.schema.json':errors.append('Invalid plugin schema identifier')
  if len(manifest['extensions']['com.openai']['interface']['shortDescription'])>30:errors.append('Subtitle too long')
+ mcp=json.loads((ROOT/'plugin-preparation/mcp.json').read_text())
+ if mcp.get('$schema')!='https://agent-plugins.org/schemas/1.0.0/mcp.schema.json':errors.append('Invalid MCP schema identifier')
+ server=mcp.get('mcpServers',{}).get('microsoft-learn',{})
+ if server.get('type')!='streamable-http' or server.get('url')!='https://learn.microsoft.com/api/mcp':errors.append('Unexpected Learn endpoint or transport')
+ if server.get('extensions',{}).get('com.openai',{}).get('auth',{}).get('type')!='none':errors.append('Unexpected Learn authentication')
  for p in ROOT.rglob('*.json'):
   if '.git' not in p.parts:json.loads(p.read_text(encoding='utf-8'))
  print(json.dumps({'skills':len(names),'locked_files_checked':count,'errors':errors},indent=2))

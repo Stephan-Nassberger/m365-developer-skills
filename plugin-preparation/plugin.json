@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "m365-developer-skills",
-  "version": "0.1.0",
-  "description": "Curated instructions for Microsoft 365 and SharePoint development. Tools and tenant access are not included.",
+  "version": "0.2.0",
+  "description": "Microsoft 365 and SharePoint development skills with official Microsoft Learn documentation search. No tenant access is included.",
   "author": {
     "name": "Stephan Nassberger"
   },
@@ -13,7 +13,7 @@
       "interface": {
         "displayName": "M365 Developer Skills",
         "shortDescription": "M365 & SharePoint Entwicklung",
-        "longDescription": "Six curated upstream packages and ten original workflows. Skills-only draft; live tool integrations and behavioral validation remain pending.",
+        "longDescription": "Seventeen curated and original development skills with the official Microsoft Learn MCP server for documentation search, full articles and code samples. Tenant access and deployment tools are configured separately.",
         "developerName": "Stephan Nassberger",
         "category": "Productivity",
         "capabilities": [],

@@ -902,6 +902,28 @@
           "sha256": "36141f1be6c96f30144367be626a909ea29b07b5a78c2e395e825d6039adc058"
         }
       ]
+    },
+    {
+      "name": "microsoft-learn",
+      "origin": "original",
+      "version": "0.1.0",
+      "license": "MIT",
+      "checked_at": "2026-11-14",
+      "references": [
+        "https://learn.microsoft.com/en-us/training/support/mcp-developer-reference",
+        "https://learn.microsoft.com/en-us/training/support/mcp-get-started"
+      ],
+      "validation": "static validation; live MCP checks documented in research/microsoft-learn-validation.json",
+      "files": [
+        {
+          "path": "M365 Developer Skills/microsoft-learn/SKILL.md",
+          "sha256": "aec3ed47c5d2e238f40c2d13d2089305ae74b87fb8fa8a241b8d61bf374ef8fa"
+        },
+        {
+          "path": "M365 Developer Skills/microsoft-learn/LICENSE",
+          "sha256": "36141f1be6c96f30144367be626a909ea29b07b5a78c2e395e825d6039adc058"
+        }
+      ]
     }
   ]
 }

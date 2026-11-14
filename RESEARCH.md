@@ -68,3 +68,7 @@ Zehn neue, englischsprachige Skills für klare Agenten-Verwendung: Modern Search
 ## Versionsnachweise
 
 `sources.lock.json` bindet jede Übernahme an Repository, vollständigen Git-Commit, ursprünglichen Pfad, Lizenz und SHA-256 pro Datei. `research/repositories.json` bewahrt die abgefragten Repository-Metadaten und Skill-Pfade auch für nicht übernommene Kandidaten. Die Originale werden durch den Git-Commit dieser Sammlung versioniert; bei eigenen Skill-Änderungen Versionsfeld und Hash aktualisieren.
+
+## Ergänzung 0.2.0: Microsoft Learn
+
+Offizielle Endpunkt- und Transportangaben anhand der [Microsoft-Dokumentation](https://learn.microsoft.com/en-us/training/support/mcp-developer-reference) geprüft. Neue eigene Arbeitsanweisung `microsoft-learn`; keine fremden Skills oder Dokumentation kopiert. MCP-Konfiguration mit Streamable HTTP, ohne Authentifizierung. Bestehende 16 Skills unverändert. Live-Testnachweise und Grenzen stehen in `research/microsoft-learn-validation.json`.

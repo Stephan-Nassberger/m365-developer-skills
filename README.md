@@ -1,6 +1,6 @@
 # M365 Developer Skills
 
-Kuratierte Sammlung für Microsoft 365 und SharePoint. Stand: **14.11.2026**. **16 Skills: 6 übernommene Pakete, 10 eigene Ergänzungen.** Kein Microsoft-zertifiziertes Produkt; kein Zugriff auf einen Tenant und keine automatische Bereitstellung.
+Kuratierte Sammlung für Microsoft 365 und SharePoint. Stand: **14.11.2026**. **17 Skills: 6 übernommene Pakete, 11 eigene Ergänzungen.** Kein Microsoft-zertifiziertes Produkt; kein Zugriff auf einen Tenant und keine automatische Bereitstellung.
 
 ## Schnellzugriff
 
@@ -15,6 +15,7 @@ Kuratierte Sammlung für Microsoft 365 und SharePoint. Stand: **14.11.2026**. **
 
 | Thema | Skill |
 |---|---|
+| Aktuelle Microsoft-Dokumentation und Codebeispiele | `microsoft-learn` + offizieller Learn-MCP-Dienst |
 | PnP PowerShell, Provisionierung, CLI, PnPjs | `martix-sharepoint-pnp` |
 | PnP Modern Search v4 | `pnp-modern-search` |
 | JSON Column Formatting | `sharepoint-json-column-formatting` |
@@ -40,10 +41,14 @@ Die Quellen sind verschieden geschnitten: einzelne Skills, große Plugin-Marktpl
 
 ## Verwendung
 
-Der gewünschte Ordner `M365 Developer Skills` ist die nachvollziehbare Quelle. Er ist wegen des zusätzlichen Ordnerlevels **kein direkt importierbares ChatGPT-Plugin**. Die Plugin-Vorbereitung erzeugt daraus die portable Struktur `skills/<name>/SKILL.md` und erhält gemeinsame Referenzen und Lizenzen. Noch kein Plugin im Konto angelegt oder installiert.
+Der gewünschte Ordner `M365 Developer Skills` ist die nachvollziehbare Quelle. Er ist wegen des zusätzlichen Ordnerlevels **kein direkt importierbares ChatGPT-Plugin**. Die Plugin-Vorbereitung erzeugt daraus die portable Struktur `skills/<name>/SKILL.md` und erhält gemeinsame Referenzen und Lizenzen. Das private Plugin ist angelegt; Version 0.2.0 ergänzt die Microsoft-Learn-MCP-Konfiguration. Der konkrete Verbindungsstatus steht in der Validierungsdokumentation.
 
 ## Pflege
 
 Neue Quellen erst nach Prüfung von echtem SKILL.md, passendem Anwendungsbereich, Lizenztext, relativen Abhängigkeiten und Tool-Voraussetzungen aufnehmen. Updates gezielt über Branch/PR mit neuem Upstream-Commit, Hashes und Änderungsprüfung; keine automatischen Updates auf ungeprüftes `main`. Ursprungsdateien nicht als eigene Arbeit ausgeben. Keine Tenant-Daten oder Zugangsdaten veröffentlichen.
 
 Originale Inhalte stehen unter MIT; übernommene Pakete behalten ihre jeweiligen MIT-/Apache-2.0-Bedingungen. Siehe THIRD_PARTY_NOTICES.md.
+
+## Microsoft Learn ab 0.2.0
+
+[Verbindungskonfiguration](plugin-preparation/mcp.json) für `https://learn.microsoft.com/api/mcp`, ohne Anmeldung. Der neue [Microsoft-Learn-Skill](M365%20Developer%20Skills/microsoft-learn/SKILL.md) beschreibt Suche, Artikelabruf, Codebeispiele und PnP-Ergänzungsquellen. Die Verbindung liefert öffentliche Dokumentation, keinen Tenant-Zugriff.

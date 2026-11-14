@@ -15,6 +15,7 @@ def main():
  for name in ['LICENSE','THIRD_PARTY_NOTICES.md','sources.lock.json']:
   entries[prefix+name]=(ROOT/name).read_bytes()
  entries[prefix+'plugin.json']=(ROOT/'plugin-preparation/plugin.json').read_bytes()
+ entries[prefix+'mcp.json']=(ROOT/'plugin-preparation/mcp.json').read_bytes()
  for name,data in entries.items():
   if not name.endswith('.md'):continue
   for target in re.findall(r'\]\(([^)]+)\)',data.decode('utf-8')):
@@ -30,7 +31,7 @@ def main():
    info=zipfile.ZipInfo(name,date_time=(2026,11,14,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED;z.writestr(info,b)
  with zipfile.ZipFile(out) as z:
   if z.testzip():raise SystemExit('Corrupt archive')
-  manifest=json.loads(z.read(prefix+'plugin.json'));names=[n for n in z.namelist() if n.endswith('/SKILL.md')];assert len(names)==16
+  manifest=json.loads(z.read(prefix+'plugin.json'));names=[n for n in z.namelist() if n.endswith('/SKILL.md')];assert len(names)==len(json.loads((ROOT/'sources.lock.json').read_text())['sources'])
   for name in names:assert len(name.split('/'))==4
  print(json.dumps({'archive':str(out),'skills':len(names),'files':len(entries),'sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'status':'packaged; not imported or runtime-tested'},indent=2))
 if __name__=='__main__':main()

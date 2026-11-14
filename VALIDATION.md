@@ -21,3 +21,13 @@ python scripts/build_plugin.py --output ../m365-developer-skills-plugin.zip
 ```
 
 Die Sammlung wurde statisch untersucht; die mitgelieferten Fremdskripte und Templates wurden nicht ausgeführt. Keine Geheimnisse oder Tenant-Inhalte wurden absichtlich aufgenommen.
+
+## Update 0.2.0: Microsoft Learn
+
+Die obigen Zahlen beziehen sich auf die Erstversion. Mit dem neuen originalen Microsoft-Learn-Skill: 17 Skills und 140 gesperrte Quelldateien. Der Paketbau enthält 138 Dateien einschließlich `mcp.json`. Struktur-/Hashprüfung und Skill-Validator erneut bestanden. Die bisherigen 16 Skill-Dateien wurden nicht geändert.
+
+Das bestehende private Benutzer-Plugin wurde als Version 0.2.0 gespeichert. Portables `mcp.json`, generiertes `.mcp.json`, synchronisiertes Kompatibilitätsmanifest und der neue Skill wurden zurückgelesen. Die Plugin-Seite zeigt 17 Skills und einen Microsoft-Learn-MCP-Server. Das bestätigt die Konfiguration, nicht die Ausführung einer Suche im Host. Im bereits laufenden Agentenchat wurden noch keine neuen Learn-Tools angeboten; gegebenenfalls Desktop-Plugin aktualisieren und neuen Chat verwenden.
+
+Endpunkt-Tests und konkrete Einschränkungen: `research/microsoft-learn-validation.json`. Keine Tenant- oder Work-IQ-Verbindung hinzugefügt.
+
+Live-Endpunkttest mit offiziellem Python MCP SDK 2.3.0: Initialisierung und Tool-Discovery erfolgreich; `microsoft_docs_search` lieferte SharePoint-Formatierungsquellen, `microsoft_docs_fetch` den Column-Formatting-Artikel und `microsoft_code_sample_search` TypeScript-Beispiele zu Azure Functions. Alle drei Aufrufe lieferten Inhalte ohne Toolfehler. Kein Ausführungstest im ChatGPT-Host; die bestehenden Chats müssen die neue Konfiguration erst laden.

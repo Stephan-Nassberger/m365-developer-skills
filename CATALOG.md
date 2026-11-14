@@ -20,3 +20,4 @@ Stand 14.11.2026. „Gefunden“ bedeutet: echte SKILL.md am fixierten Commit ge
 | [microsoft-forms-integration](M365%20Developer%20Skills/microsoft-forms-integration/SKILL.md) | Eigens erstellt | MIT | Original 0.1.0 · Primärdokumentation im Skill |
 | [sharepoint-html-spfx-extensions](M365%20Developer%20Skills/sharepoint-html-spfx-extensions/SKILL.md) | Eigens erstellt | MIT | Original 0.1.0 · Primärdokumentation im Skill |
 | [azure-functions-m365](M365%20Developer%20Skills/azure-functions-m365/SKILL.md) | Eigens erstellt | MIT | Original 0.1.0 · Primärdokumentation im Skill |
+| [microsoft-learn](M365%20Developer%20Skills/microsoft-learn/SKILL.md) | Eigens erstellt | MIT | Original 0.1.0 · offizieller Microsoft-Learn-MCP-Dienst |
