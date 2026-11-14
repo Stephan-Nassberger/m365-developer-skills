@@ -1,0 +1,24 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "m365-developer-skills",
+  "version": "0.1.0",
+  "description": "Curated instructions for Microsoft 365 and SharePoint development. Tools and tenant access are not included.",
+  "author": {
+    "name": "Stephan Nassberger"
+  },
+  "repository": "https://github.com/Stephan-Nassberger/m365-developer-skills",
+  "license": "MIT AND Apache-2.0",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "M365 Developer Skills",
+        "shortDescription": "M365 & SharePoint Entwicklung",
+        "longDescription": "Six curated upstream packages and ten original workflows. Skills-only draft; live tool integrations and behavioral validation remain pending.",
+        "developerName": "Stephan Nassberger",
+        "category": "Productivity",
+        "capabilities": [],
+        "defaultPrompt": "Hilf mir bei einer Microsoft-365- oder SharePoint-Entwicklungsaufgabe. Prüfe zuerst Projektversion, Zielumgebung und verfügbare Tools."
+      }
+    }
+  }
+}
